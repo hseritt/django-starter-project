@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{ title }}</title>
+  {% include 'components/_css_imports.html' %}
+  {% include 'components/_script_imports.html' %}
+</head>
+<body>
+  <div id="app">
+    <div class="container">
+      <h1>{{ title }}</h1>
+      <p>[[ title ]]</p>
+      <nav>
+        <a href="{% url 'logout' %}">Logout</a>
+      </nav>
+      <div>
+        <p  v-bind:class="{bg-success: bgSuccess}">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non facilis minima accusamus velit eligendi repellat molestias possimus obcaecati, iusto reprehenderit tempora omnis ea dolores debitis eum odit soluta sed rerum?
+        </p>
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/script.js"></script>
+</body>
+</html>
